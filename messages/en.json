@@ -24,5 +24,6 @@
   "profile.phone": "Phone",
   "profile.company": "Company",
   "profile.country": "Country",
-  "profile.editProfile": "Edit Profile"
+  "profile.editProfile": "Edit Profile",
+  "sidebar.onboarding": "Onboarding"
 }

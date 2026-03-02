@@ -1,0 +1,1 @@
+﻿components/PanVerification.tsx(47,13): error TS2353: Object literal may only specify known properties, and 'tessedit_char_whitelist' does not exist in type 'Partial<WorkerOptions>'.

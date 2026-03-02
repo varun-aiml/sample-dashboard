@@ -24,5 +24,6 @@
     "profile.phone": "رقم الهاتف",
     "profile.company": "الشركة",
     "profile.country": "البلد",
-    "profile.editProfile": "تعديل الملف الشخصي"
+    "profile.editProfile": "تعديل الملف الشخصي",
+    "sidebar.onboarding": "المصادقة"
 }
