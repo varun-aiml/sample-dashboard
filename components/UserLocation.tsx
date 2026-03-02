@@ -187,7 +187,7 @@ export default function UserLocation() {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
                         <div className="bg-indigo-50/70 p-4 rounded-xl border border-indigo-100">
                             <p className="text-xs font-semibold text-indigo-800 uppercase tracking-wider mb-1.5">Latitude</p>
                             <p className="text-sm font-medium text-indigo-950 truncate">{locationData.lat.toFixed(6)}</p>

@@ -85,8 +85,8 @@ export default function DashboardPage() {
                 <div className="p-6 border-b border-gray-100">
                     <h2 className="text-lg font-bold text-[#0A2540]">{t("dashboard.recentTransactions")}</h2>
                 </div>
-                <div className="overflow-x-auto">
-                    <table className="w-full text-start">
+                <div className="overflow-x-auto w-full">
+                    <table className="w-full min-w-[600px] text-start">
                         <thead className="bg-[#F5F7FA] text-xs uppercase text-gray-500">
                             <tr>
                                 <th className="px-6 py-4 font-medium text-start">{t("table.transactionId")}</th>

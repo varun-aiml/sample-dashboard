@@ -3,25 +3,35 @@
 import { useLanguage } from "@/context/LanguageContext";
 import { BellIcon, SearchIcon } from "./Icons";
 
-export const Header = () => {
+export const Header = ({ onMenuClick }: { onMenuClick?: () => void }) => {
     const { t, language, toggleLanguage } = useLanguage();
 
     return (
-        <header className="h-20 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-100 flex items-center justify-between px-8 sticky top-0 z-10 w-full transition-all">
-            <div className="flex items-center w-full max-w-md hidden md:flex">
-                <div className="relative w-full">
-                    <span className="absolute inset-y-0 start-0 flex items-center ps-4">
-                        <SearchIcon className="w-5 h-5 text-gray-400" />
-                    </span>
-                    <input
-                        type="text"
-                        placeholder={t("header.search")}
-                        className="w-full bg-[#F5F7FA] border-none rounded-xl py-2.5 ps-12 pe-4 focus:ring-2 focus:ring-[#635BFF]/50 outline-none transition-all placeholder-gray-400 text-sm"
-                    />
+        <header className="h-20 bg-white/80 backdrop-blur-md shadow-sm border-b border-gray-100 flex items-center justify-between px-4 sm:px-6 md:px-8 sticky top-0 z-10 w-full transition-all">
+            <div className="flex items-center flex-1 gap-4">
+                <button
+                    onClick={onMenuClick}
+                    className="md:hidden p-2 -ms-2 text-gray-500 hover:text-[#0A2540] transition-colors rounded-lg hover:bg-gray-100"
+                >
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+                <div className="flex items-center w-full max-w-md hidden md:flex">
+                    <div className="relative w-full">
+                        <span className="absolute inset-y-0 start-0 flex items-center ps-4">
+                            <SearchIcon className="w-5 h-5 text-gray-400" />
+                        </span>
+                        <input
+                            type="text"
+                            placeholder={t("header.search")}
+                            className="w-full bg-[#F5F7FA] border-none rounded-xl py-2.5 ps-12 pe-4 focus:ring-2 focus:ring-[#635BFF]/50 outline-none transition-all placeholder-gray-400 text-sm"
+                        />
+                    </div>
                 </div>
             </div>
 
-            <div className="flex items-center gap-6 ms-auto">
+            <div className="flex items-center gap-4 sm:gap-6 ms-auto">
                 <button
                     onClick={toggleLanguage}
                     className="flex items-center gap-2 font-medium text-[#0A2540] hover:text-[#635BFF] transition-colors text-sm px-3 py-1.5 rounded-lg border border-gray-200"

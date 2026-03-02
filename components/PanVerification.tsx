@@ -152,33 +152,33 @@ export default function PanVerification() {
 
     // ---------------- UI ----------------
     return (
-        <div className="p-6 bg-white rounded-xl shadow-md grid grid-cols-2 gap-8">
-            <div>
-                <h2 className="text-xl font-semibold mb-4">Onboarding - PAN Verification</h2>
+        <div className="p-4 sm:p-6 bg-white rounded-xl shadow-md flex flex-col md:flex-row gap-4 sm:gap-6 md:gap-8 w-full">
+            <div className="w-full md:w-1/2 flex flex-col">
+                <h2 className="text-xl font-semibold mb-4 text-[#0A2540]">Onboarding - PAN Verification</h2>
 
-                <input type="file" accept="image/*" onChange={handleFileChange} />
+                <input className="w-full text-sm sm:text-base border p-2 rounded" type="file" accept="image/*" onChange={handleFileChange} />
 
                 {preview && (
-                    <img src={preview} alt="preview" className="mt-4 w-64 rounded-lg border" />
+                    <img src={preview} alt="preview" className="mt-4 w-full md:w-64 rounded-lg border max-w-full" />
                 )}
 
                 <button
                     onClick={scanPan}
-                    className="mt-4 px-6 py-3 bg-indigo-600 text-white rounded-lg"
+                    className="mt-4 px-6 py-3 bg-indigo-600 text-white rounded-lg w-full md:w-auto font-medium"
                 >
                     Scan PAN
                 </button>
 
-                {loading && <p className="mt-2">Scanning... {progress}%</p>}
+                {loading && <p className="mt-2 text-sm text-gray-500">Scanning... {progress}%</p>}
             </div>
 
-            <div>
-                <h2 className="text-xl font-semibold mb-4">Extracted Details</h2>
+            <div className="w-full md:w-1/2 flex flex-col">
+                <h2 className="text-xl font-semibold mb-4 text-[#0A2540]">Extracted Details</h2>
 
                 <div className="space-y-4">
-                    <input className="border p-2 w-full rounded" placeholder="Full Name" value={details.fullName} readOnly />
-                    <input className="border p-2 w-full rounded" placeholder="Date of Birth" value={details.dateOfBirth} readOnly />
-                    <input className="border p-2 w-full rounded" placeholder="PAN Number" value={details.panNumber} readOnly />
+                    <input className="border p-2 w-full rounded focus:outline-none" placeholder="Full Name" value={details.fullName} readOnly />
+                    <input className="border p-2 w-full rounded focus:outline-none" placeholder="Date of Birth" value={details.dateOfBirth} readOnly />
+                    <input className="border p-2 w-full rounded focus:outline-none" placeholder="PAN Number" value={details.panNumber} readOnly />
                 </div>
             </div>
         </div>
